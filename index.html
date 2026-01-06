@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">    
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="bgMusic.mp3" type="audio/mpeg">
+</audio>
+<audio id="sound" src="sound.mp3"></audio>
+    
+<nav id="navigation">
+    <div class="nav-item">
+        <a class="navigation-links" href="#">About</a>
+        <div class="floating-box">
+            <h3>About Us</h3>
+            <p>Testify is currently in its prototype stage and is not yet fully developed. Some features may be <br> incomplete, and users may encounter bugs or unexpected behavior.</p>
+        </div>
+    </div>
+
+    <div class="nav-item">
+        <a class="navigation-links" href="#">Home</a>
+        <div class="floating-box">
+            <h3>Home Page</h3>
+            <p>Return to the homepage and see latest updates.</p>
+        </div>
+    </div>
+
+    <div class="nav-item">
+        <a class="navigation-links" href="#">Contact us</a>
+        <div class="floating-box">
+            <h3>Contact Us</h3>
+            <p>Get in touch with us via email or social media.
+                Testify@gmail.com
+                0912345678
+            </p>
+        </div>
+    </div>
+
+    <div class="nav-item">
+        <a class="navigation-links" href="#">Feedback</a>
+        <div class="floating-box">
+            <h3>Feedback</h3>
+            <p>Share your thoughts and suggestions with us.</p>
+            <textarea id="textarea"></textarea>
+        </div>
+    </div>
+</nav>
+
+    <nav id="first-navigation">
+               
+    </nav>
+
+    <div id="container" class="page active">
+        <div id="first-main-container">
+            <img src="titles.png">
+            <h1 id="first-user" style="font-family: 'Times New Roman', Times, serif;">What should we call you?</h1>
+            <hr>
+            <div id="input-group" class="floating-label">
+                <input id="input" type="text" required />
+                <label id="placeholder">Your name:</label>
+            </div>
+            <button id="first-button-container" onclick="firstbutton()">Click here</button>
+        </div>
+    </div>
+
+    <div id="second" class="page">
+        <div id="main-container">
+            <h1 id="second-design"></h1>
+            <hr>
+            <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 50px;">
+                <button id="T-button" onclick="showpage('teacher-area')">Make a Quiz</button>
+                <button id="S-button" onclick="showpage('student-area')">Take a Quiz</button>
+                <button id="L-button" onclick="showpage('leaderboard-area')">Leaderboard</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="student-area" class="page">
+        <div id="student-main-area">
+            <img id="imggg" src="titles.png" alt="">
+            <h1 id="student-code">Enter ID room</h1>
+            <input id="student-type-code" type="text"><br>
+            <button id="student-button" onclick="joinRoom()">Click here</button><br>
+            
+        </div>
+    </div>
+
+    <div id="teacher-area" class="page">
+        <div id="teacher-main-area">
+            <input id="teacher-question" type="text" placeholder="Create a question">
+            <input id="teacher-option-0" type="text" placeholder="First Choice">
+            <input id="teacher-radio-0" value="0" type="radio" name="option">
+            <input id="teacher-option-1" type="text" placeholder="Second Choice">
+            <input id="teacher-radio-1" value="1" type="radio" name="option">
+            <input id="teacher-option-2" type="text" placeholder="Third Choice">
+            <input id="teacher-radio-2" value="2" type="radio" name="option">
+            <input id="teacher-option-3" type="text" placeholder="Fourth Choice">
+            <input id="teacher-radio-3" value="3" type="radio" name="option">
+            <button id="teacher-button" onclick="addquestion()">Add more question</button>
+            
+            <button id="start" onclick="start()">Take quiz</button>
+            <button id="teacher-generate-code" onclick="saveQuiz()">Create a Code</button>
+            <input id="quiz-code" type="text" placeholder="Input code">
+        </div>
+    </div>
+
+    <div style="word-wrap: break-word;" id="Quiz-area" class="page"></div>
+
+    <div id="leaderboard-area" class="page">
+        <div id="leaderboard-container">
+            <h1 id="leaderboard-title">🏆 Leaderboard 🏆</h1>
+            <input id="leaderboard-quiz-code" type="text" placeholder="Enter Quiz Code">
+            <button id="view-leaderboard-btn" onclick="viewLeaderboard()">View Leaderboard</button>
+            <div id="leaderboard-content"></div>
+        </div>
+    </div>
+
+    <script type="module" src="javaaa.js" defer></script>
+</body>
+</html>
